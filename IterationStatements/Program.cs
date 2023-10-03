@@ -17,7 +17,8 @@ namespace IterationStatements
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
 
-
+            int num = 0;
+            do { num++; numbers.Add(num); } while (num < 100);
 
             // Create a do-while loop and use the template below:
 
@@ -26,11 +27,12 @@ namespace IterationStatements
 
                 // Then add num to the collection - numbers
                     // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+               // numbers.Add(/* num */);
 
             } // <---- While your variable is less than 100
 
-
+            while (num < 200)
+            { num++; numbers.Add(num); }
 
             // Create a while loop
             // <--- While num is less than 200
@@ -44,7 +46,10 @@ namespace IterationStatements
 
             // This is to show the user that the numbers will start increasing on the console
             Console.WriteLine("Increase:");
-
+            foreach (int i in numbers) 
+                {
+                    Console.WriteLine($"{i}");
+                }
 
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
@@ -53,7 +58,10 @@ namespace IterationStatements
 
             Console.WriteLine("");
             Console.WriteLine("Decrease:");
-
+            for (int i = 199; i <= numbers.Count && i >= 0; i--) 
+            {
+            Console.WriteLine($"{i}");
+            }
 
             // Create a for loop - this will print the numbers in reverse order - from 200 to 1
                 // in your initializer set the value of i to 199
